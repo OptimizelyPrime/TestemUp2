@@ -1,17 +1,25 @@
 using Source.Services;
+using System.Diagnostics.CodeAnalysis;
 
-var builder = WebApplication.CreateBuilder(args);
+[ExcludeFromCodeCoverage]
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllers();
-builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
+        // Add services to the container.
+        builder.Services.AddControllers();
+        builder.Services.AddScoped<IWeatherForecastService, WeatherForecastService>();
 
-var app = builder.Build();
+        var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-app.UseHttpsRedirection();
-app.UseAuthorization();
+        // Configure the HTTP request pipeline.
+        app.UseHttpsRedirection();
+        app.UseAuthorization();
 
-app.MapControllers();
+        app.MapControllers();
 
-app.Run();
+        app.Run();
+    }
+}

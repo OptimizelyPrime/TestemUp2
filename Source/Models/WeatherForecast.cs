@@ -1,3 +1,5 @@
+namespace Source.Models;
+
 public class WeatherForecast
 {
     public int Id { get; set; }

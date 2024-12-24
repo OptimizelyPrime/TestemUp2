@@ -1,5 +1,8 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace Source.Models;
 
+[ExcludeFromCodeCoverage]
 public class WeatherForecast
 {
     public int Id { get; set; }

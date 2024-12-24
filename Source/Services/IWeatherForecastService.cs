@@ -2,7 +2,6 @@ using Source.Models;
 
 namespace Source.Services;
 
-
 public interface IWeatherForecastService
 {
     IEnumerable<WeatherForecast> GetForecasts();

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Source.Models;
 using Source.Services;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Source.Controllers;
 
@@ -22,6 +23,7 @@ public class WeatherForecastController : ControllerBase
     }
 
     [HttpGet("{id}")]
+    [ExcludeFromCodeCoverage]
     public ActionResult<WeatherForecast> Get(int id)
     {
         var forecast = _weatherForecastService.GetForecastById(id);

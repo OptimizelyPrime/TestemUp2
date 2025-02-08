@@ -7,7 +7,7 @@ public class WeatherForecastService : IWeatherForecastService
     private readonly List<WeatherForecast> _forecasts = new();
 
     /// <summary>
-    /// Retrieves all weather forecasts.
+    /// I'M USING ALL CAPS TO SIMULATE USER COMMENTS.
     /// </summary>
     /// <returns>An enumerable collection of <see cref="WeatherForecast"/> objects.</returns>
     /// <remarks>This function requires the <see cref="Source.Models"/> namespace to access the <see cref="WeatherForecast"/> class.</remarks>

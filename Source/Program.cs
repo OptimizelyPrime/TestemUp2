@@ -2,7 +2,7 @@ using Source.Services;
 using System.Diagnostics.CodeAnalysis;
 
 [ExcludeFromCodeCoverage]
-internal class Program
+public class Program
 {
     private static void Main(string[] args)
     {

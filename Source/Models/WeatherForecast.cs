@@ -1,12 +1,14 @@
 using System.Diagnostics.CodeAnalysis;
 
-namespace Source.Models;
-
-[ExcludeFromCodeCoverage]
-public class WeatherForecast
+namespace Source.Models
 {
-    public int Id { get; set; }
-    public DateTime Date { get; set; }
-    public int TemperatureC { get; set; }
-    public string? Summary { get; set; }
+
+    [ExcludeFromCodeCoverage]
+    public class WeatherForecast
+    {
+        public int Id { get; set; }
+        public DateTime Date { get; set; }
+        public int TemperatureC { get; set; }
+        public string? Summary { get; set; }
+    }
 }

@@ -1,23 +1,25 @@
 ﻿using Source.Models;
 
-namespace Source.Services;
-
-public class WeatherForecastService : IWeatherForecastService
+namespace Source.Services
 {
-    private readonly List<WeatherForecast> _forecasts = new();
 
-    public IEnumerable<WeatherForecast> GetForecasts()
+    public class WeatherForecastService : IWeatherForecastService
     {
-        return _forecasts;
-    }
+        private readonly List<WeatherForecast> _forecasts = new();
 
-    public WeatherForecast GetForecastById(int id)
-    {
-        return _forecasts.FirstOrDefault(f => f.Id == id);
-    }
+        public IEnumerable<WeatherForecast> GetForecasts()
+        {
+            return _forecasts;
+        }
 
-    public void AddForecast(WeatherForecast forecast)
-    {
-        _forecasts.Add(forecast);
+        public WeatherForecast GetForecastById(int id)
+        {
+            return _forecasts.FirstOrDefault(f => f.Id == id);
+        }
+
+        public void AddForecast(WeatherForecast forecast)
+        {
+            _forecasts.Add(forecast);
+        }
     }
 }
